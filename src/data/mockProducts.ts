@@ -1,0 +1,55 @@
+import type { Product } from '../types';
+
+// Начальные данные в формате dummyjson.com/products
+export const mockProducts: Product[] = [
+  {
+    id: 1,
+    title: 'Essence Mascara Lash Princess',
+    description: 'Popular mascara known for its volumizing and lengthening effects.',
+    category: 'beauty',
+    brand: 'Essence',
+    price: 9.99,
+    stock: 5,
+    rating: 4.94,
+  },
+  {
+    id: 2,
+    title: 'Eyeshadow Palette with Mirror',
+    description: 'Versatile range of eyeshadow shades with a built-in mirror.',
+    category: 'beauty',
+    brand: 'Glamour Beauty',
+    price: 19.99,
+    stock: 44,
+    rating: 3.28,
+  },
+  {
+    id: 3,
+    title: 'Calvin Klein CK One',
+    description: 'Classic unisex fragrance with a fresh and clean scent.',
+    category: 'fragrances',
+    brand: 'Calvin Klein',
+    price: 49.99,
+    stock: 29,
+    rating: 4.85,
+  },
+  {
+    id: 4,
+    title: 'Annibale Colombo Bed',
+    description: 'Luxurious bed crafted with high-quality materials.',
+    category: 'furniture',
+    brand: 'Annibale Colombo',
+    price: 1899.99,
+    stock: 0,
+    rating: 4.14,
+  },
+  {
+    id: 5,
+    title: 'Apple',
+    description: 'Fresh and crisp apples, perfect for snacking.',
+    category: 'groceries',
+    brand: '',
+    price: 1.99,
+    stock: 8,
+    rating: 4.19,
+  },
+];
