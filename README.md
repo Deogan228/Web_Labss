@@ -8,13 +8,3 @@
 | [lab2-products](lab2-products) | ЛР2: приложение на Next.js App Router с данными из API DummyJSON | Next.js 16, React 19, TypeScript, Zustand |
 
 Отчёты лежат в папках `Отчет` внутри каждой работы.
-
-## Запуск
-
-Каждая работа запускается из своей папки:
-
-```bash
-cd lab1-products   # или lab2-products
-npm install
-npm run dev
-```
