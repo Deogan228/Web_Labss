@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* библиотека компонентов DaisyUI: btn, card, input, alert, badge, skeleton…
+   утилита join отключена: её CSS (@scope) не разбирает Turbopack в режиме разработки */
+@plugin "daisyui" {
+  themes: light --default;
+  exclude: join;
+}

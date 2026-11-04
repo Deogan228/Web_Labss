@@ -1,0 +1,7 @@
+node_modules
+.next
+next-env.d.ts
+*.tsbuildinfo
+coverage
+# секреты (AUTH_SECRET) — только локально
+.env*.local
