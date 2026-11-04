@@ -1,9 +1,9 @@
 // Настройка Auth.js: вход по логину и паролю, сессия в зашифрованном JWT в httpOnly-cookie
 import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
-import { loginWithDummyJson } from '@/lib/auth-api';
 import { env } from '@/lib/env';
 import { loginSchema } from '@/lib/schemas';
+import { verifyUser } from '@/lib/users';
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   secret: env.AUTH_SECRET,
@@ -18,7 +18,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         // данные с формы — внешняя граница, проверяем их Zod-схемой
         const parsed = loginSchema.safeParse(credentials);
         if (!parsed.success) return null;
-        return loginWithDummyJson(parsed.data);
+        return verifyUser(parsed.data);
       },
     }),
   ],

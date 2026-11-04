@@ -6,10 +6,10 @@ import { loginAction } from './actions';
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
-// учётные записи DummyJSON: роль берётся из профиля пользователя
+// учётные записи для проверки (хранятся в lib/users.ts)
 const DEMO_ACCOUNTS = [
-  { username: 'emilys', password: 'emilyspass', role: 'администратор' },
-  { username: 'averyp', password: 'averyppass', role: 'пользователь' },
+  { username: 'ruslan', password: 'ruslanpass', role: 'администратор' },
+  { username: 'maximka', password: 'maximkapass', role: 'пользователь' },
 ];
 
 export default async function LoginPage({ searchParams }: { searchParams: Promise<SearchParams> }) {

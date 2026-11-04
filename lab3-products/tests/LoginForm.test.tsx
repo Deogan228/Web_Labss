@@ -20,11 +20,11 @@ describe('LoginForm', () => {
     const user = userEvent.setup();
     render(<LoginForm callbackUrl="/products/new" action={action} />);
 
-    await user.type(screen.getByLabelText('Логин'), 'emilys');
+    await user.type(screen.getByLabelText('Логин'), 'ruslan');
     await user.type(screen.getByLabelText('Пароль'), 'wrong');
     await user.click(screen.getByRole('button', { name: 'Войти' }));
 
-    expect(action).toHaveBeenCalledWith({ username: 'emilys', password: 'wrong' }, '/products/new');
+    expect(action).toHaveBeenCalledWith({ username: 'ruslan', password: 'wrong' }, '/products/new');
     expect(await screen.findByRole('alert')).toHaveTextContent('Неверный логин или пароль');
   });
 });
